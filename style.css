@@ -31,12 +31,22 @@ a{
 }
 .top-header a{
     padding: 15px 20px;
+    position: relative;
+    /* border-right: 1px solid rgba(183, 183, 183, 0.635); */
+}
+.top-header a::after{
+    content:"";
+    position: absolute;
     border-right: 1px solid rgba(183, 183, 183, 0.635);
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    z-index: 1;
 }
 .addr-timing li:first-child a{
     padding-left: 0px;
 }
-.item li:last-child a{
+.item li:last-child a::after{
     border: none;
     padding-right: 0px;
 }
@@ -90,7 +100,7 @@ a{
 }
 .banner{
     height:580px;
-    background: linear-gradient(rgba(48, 48, 89, 0.815),rgba(0, 0, 0, 0.71)),url(./Images/banner.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.525),rgba(0, 0, 0, 0.571)),url(./Images/banner.jpg) no-repeat center/cover;
     position: relative;
 }
 .banner .container{
@@ -132,30 +142,45 @@ h1{
 .working{
     align-self: center;
 }
-.play-btn img{
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
+.play-btn{
+    align-self: center;
 }
-.play-btn a{
+.play-btn img{
+    /* height: 20px;
+    width: 20px; */
+    vertical-align: middle;
+    padding: 15px;
+    background-color: rgb(126, 61, 15);
+    border-radius: 50%;
+}
+/* .play-btn a{
     background-color: rgb(126, 61, 15);
     border-radius: 50%;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 15px;
-}
+} */
 .service-btn a{
     padding: 15px;
 }
 .features .item{
     width: 16.6%;
     text-align: center;
-    border-right: 1px solid white;
+    position: relative;
+    /* border-right: 1px solid white; */
     span{
         display: inline-block;
         text-align: start;
     }
+}
+.features .item::after{
+    content: "";
+    border-right: 1px solid rgba(183, 183, 183, 0.635);
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 90%;
 }
 .features{
     position: absolute;
@@ -173,9 +198,9 @@ h1{
     }
 }
 .feature-items{
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-inline: 30px;
 }
-.feature-items .item:last-child{
+.feature-items .item:last-child::after{
     border: none;
 }
