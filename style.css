@@ -48,6 +48,8 @@ a{
 }
 .item li:last-child a::after{
     border: none;
+}
+.social-contacts li:last-child a{
     padding-right: 0px;
 }
 .logo{
@@ -142,13 +144,10 @@ h1{
 .working{
     align-self: center;
 }
-.play-btn{
-    align-self: center;
-}
 .play-btn img{
     /* height: 20px;
     width: 20px; */
-    vertical-align: middle;
+    /* vertical-align: middle; */
     padding: 15px;
     background-color: rgb(126, 61, 15);
     border-radius: 50%;
