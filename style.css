@@ -204,3 +204,6 @@ h1{
 .feature-items .item:last-child::after{
     border: none;
 }
+a:hover{
+    color: rgb(57, 193, 184);
+}
